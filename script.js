@@ -1,5 +1,5 @@
 // ضع هنا رابط ملف JSON الخارجي (عدله حسب رابطك الحقيقي)
-const DATA_URL = "https://example.com/data.json";
+const DATA_URL = "https://raw.githubusercontent.com/elmonasib/green-horse/main/data.json";
 
 // Sidebar
 const menuBtn = document.getElementById("menuBtn");
@@ -48,8 +48,3 @@ fetch(DATA_URL)
     console.error("❌ Error loading data.json:", err);
     alert("تعذر تحميل البيانات. تحقق من الرابط.");
   });
-
-    console.error("Error loading data.json:", err);
-    alert("تعذر تحميل البيانات. تحقق من الرابط.");
-  });
-
