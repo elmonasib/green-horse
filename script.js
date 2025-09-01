@@ -20,7 +20,7 @@ overlay.addEventListener('click', () => {
   overlay.classList.remove('active');
 });
 
-// Load JSON data
+// دالة تحميل البيانات من JSON
 async function loadData() {
   try {
     const response = await fetch(jsonURL);
@@ -46,4 +46,10 @@ async function loadData() {
   }
 }
 
-window.addEventListener('DOMContentLoaded', loadData);
+// تحميل البيانات عند فتح الصفحة
+window.addEventListener('DOMContentLoaded', () => {
+  loadData();
+
+  // تحديث البيانات كل 10 ثواني (10000 مللي ثانية)
+  setInterval(loadData, 10000);
+});

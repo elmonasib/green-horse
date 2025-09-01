@@ -58,3 +58,8 @@
 #overlay.active {
   display: block;
 }
+
+
+.fw-bold {
+  padding: 30px;
+}

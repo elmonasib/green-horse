@@ -1,11 +1,9 @@
 {
-  "date_pronostic": "02.09.20",
+  "date_pronostic": "02.09.2025",
   "date_rapport": "03.09.2025",
   "pronostic": {
     "title": "R1 Casablanca",
-    "names": "Plat - Handicap divise Classe 2\nPlayer 4 ans et Plus - 1600 mètres, Corde à droite\nPlayer Ref: +19 (*) - départ vers 13h55",
-
-
+    "names": "Player One\nPlayer Two\nPlayer Three",
     "numbers": "4 7 2 9 5 1"
   },
   "rapport": {
@@ -17,8 +15,3 @@
     "terce": "200.00 DH"
   }
 }
-
-
-
-
-
