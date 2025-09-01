@@ -1,5 +1,5 @@
-// رابط خارجي لملف JSON (غيّر الرابط إلى رابطك الحقيقي)
-const DATA_URL = "https://username.github.io/project/data.json";
+// ضع هنا رابط ملف JSON الخارجي (عدله حسب رابطك الحقيقي)
+const DATA_URL = "https://example.com/data.json";
 
 // Sidebar
 const menuBtn = document.getElementById("menuBtn");
@@ -20,7 +20,7 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
-// Load JSON Data from external link
+// 🔹 تحميل البيانات من الرابط الخارجي
 fetch(DATA_URL)
   .then(res => {
     if (!res.ok) throw new Error("Network response was not ok");
@@ -45,6 +45,11 @@ fetch(DATA_URL)
     document.getElementById("rapport-terce").textContent = data.rapport.terce;
   })
   .catch(err => {
+    console.error("❌ Error loading data.json:", err);
+    alert("تعذر تحميل البيانات. تحقق من الرابط.");
+  });
+
     console.error("Error loading data.json:", err);
     alert("تعذر تحميل البيانات. تحقق من الرابط.");
   });
+
