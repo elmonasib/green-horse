@@ -1,23 +1,17 @@
 {
-  "date": "09.01.2021",
+  "date_pronostic": "02.09.2020",
+  "date_rapport": "03.09.2029",
   "pronostic": {
-    "title": "Rr1 vencen",
-    "names": "Plat - Handicap divise Classe 2 - 4 ans et Plus - 1600 mètres, Corde à droite - Ref: +19 (*) - départ vers 13h55",
-    "numbers": "6 5 8 11 2  14"
+    "title": "R1 Casablanca",
+    "names": "Plat - Handicap divise Classe 2 / 4 ans et Plus / 1600 mètres, Corde à droite - Ref: +19 (*) - départ vers 13h55",
+    "numbers": "4 7 2 9 5 1"
   },
   "rapport": {
-    "title": "R1 vencen",
-    "numbers": "6 5 8 11 29 14",
-    "order": "1200.00 DH",
-    "desorde": "1200.00 DH",
-    "qoarti": "400.00 DH",
-    "terce": "10.00 DH"
+    "title": "R1 Casablanca",
+    "numbers": "4 7 2 9 5 1",
+    "order": "1500.00 DH",
+    "desorde": "1000.00 DH",
+    "qoarti": "500.00 DH",
+    "terce": "200.00 DH"
   }
 }
-
-
-
-
-
-
-
