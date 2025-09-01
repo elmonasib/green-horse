@@ -1,6 +1,7 @@
 /* Gradient background */
 .bg-gradient-custom {
   background: linear-gradient(90deg, #009688, #0072ff);
+  color: white;
 }
 
 /* Custom cards */
