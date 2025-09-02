@@ -1,19 +1,37 @@
 {
-  "date_pronostic": "02.09.2026",
-  "date_rapport": "03.09.2029",
   "pronostic": {
+    "date": "02.09.2025",
     "title": "R1 Casablanca",
-    "names": "Plat - Handicap divise Classe 2 - 4 ans et Plus - 1600 mètres, Corde à droite - Ref: +19 (*) - départ vers 13h55",
+    "names": "Player One\nPlayer Two",
     "numbers": "4 7 2 9 5 1"
   },
-  "rapport": {
-    "title": "R1 Casablanca",
-    "numbers": "4 7 2 9 5 1",
+  "pronostic_reunion1": {
+    "course1": "6 5 8 1 4",
+    "course2": "5 8 9 6 1",
+    "course3": "5 6 7 4 1",
+    "course4": "5 6 7 4 1",
+    "course5": "5 6 7 4 1",
+    "course6": "5 6 7 4 1",
+    "course7": "5 6 7 4 1",
+    "course8": "5 6 7 4 1"
+  },
+  "rapport_quinte": {
+    "date": "03.09.2025",
+    "numbers": "6 5 8 11 2 1 14",
     "order": "1500.00 DH",
     "desorde": "1000.00 DH",
     "qoarti": "500.00 DH",
     "terce": "200.00 DH"
+  },
+  "rapport_reunion1": {
+    "date": "04.09.2025",
+    "course1": "6 5 8 1 4",
+    "course2": "5 8 9 6 1",
+    "course3": "5 6 7 4 1",
+    "course4": "5 6 7 4 1",
+    "course5": "5 6 7 4 1",
+    "course6": "5 6 7 4 1",
+    "course7": "5 6 7 4 1",
+    "course8": "5 6 7 4 1"
   }
 }
-
-

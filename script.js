@@ -1,55 +1,68 @@
-// رابط JSON خارجي من GitHub (ضع الرابط raw هنا)
-const jsonURL = 'https://raw.githubusercontent.com/elmonasib/green-horse/main/data.json';
+const DATA_URL = "data.json";
 
 // Sidebar toggle
-const sidebar = document.getElementById('sidebar');
-const overlay = document.getElementById('overlay');
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+const closeSidebar = document.getElementById("closeSidebar");
+const overlay = document.getElementById("overlay");
 
-document.getElementById('menuBtn').addEventListener('click', () => {
-  sidebar.classList.add('active');
-  overlay.classList.add('active');
-});
-
-document.getElementById('closeSidebar').addEventListener('click', () => {
-  sidebar.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
-overlay.addEventListener('click', () => {
-  sidebar.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
-// دالة تحميل البيانات من JSON
-async function loadData() {
-  try {
-    const response = await fetch(jsonURL);
-    const data = await response.json();
-
-    // Pronostic
-    document.getElementById('date-pronostic').innerText = data.date_pronostic;
-    document.getElementById('pronostic-title').innerText = data.pronostic.title;
-    document.getElementById('pronostic-names').innerHTML = data.pronostic.names.replace(/\n/g, '<br>');
-    document.getElementById('pronostic-numbers').innerText = data.pronostic.numbers;
-
-    // Rapport
-    document.getElementById('date-rapport').innerText = data.date_rapport;
-    document.getElementById('rapport-title').innerText = data.rapport.title;
-    document.getElementById('rapport-numbers').innerText = data.rapport.numbers;
-    document.getElementById('rapport-order').innerText = data.rapport.order;
-    document.getElementById('rapport-desorde').innerText = data.rapport.desorde;
-    document.getElementById('rapport-qoarti').innerText = data.rapport.qoarti;
-    document.getElementById('rapport-terce').innerText = data.rapport.terce;
-
-  } catch (error) {
-    console.error('Erreur lors du chargement du JSON:', error);
-  }
+if(menuBtn && sidebar && closeSidebar && overlay){
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+  });
+  closeSidebar.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+  });
 }
 
-// تحميل البيانات عند فتح الصفحة
-window.addEventListener('DOMContentLoaded', () => {
-  loadData();
+// Load JSON data
+fetch(DATA_URL)
+  .then(res => {
+    if(!res.ok) throw new Error("Network response was not ok");
+    return res.json();
+  })
+  .then(data => {
 
-  // تحديث البيانات كل 10 ثواني (10000 مللي ثانية)
-  setInterval(loadData, 10000);
-});
+    // === Pronostic page ===
+    if(document.getElementById("pronostic-date")){
+      // Pronostic main
+      document.getElementById("pronostic-date").textContent = data.pronostic.date;
+      document.getElementById("pronostic-title").textContent = data.pronostic.title;
+      document.getElementById("pronostic-names").textContent = data.pronostic.names;
+      document.getElementById("pronostic-numbers").textContent = data.pronostic.numbers;
+
+      // Réunion1 courses
+      for(let i=1;i<=8;i++){
+        const el = document.getElementById("course-"+i);
+        if(el) el.textContent = data.pronostic_reunion1["course"+i];
+      }
+    }
+
+    // === Rapport page ===
+    if(document.getElementById("rapport-quinte-date")){
+      // Rapport Quinte
+      document.getElementById("rapport-quinte-date").textContent = data.rapport_quinte.date;
+      document.getElementById("rapport-quinte-numbers").textContent = data.rapport_quinte.numbers;
+      document.getElementById("rapport-quinte-order").textContent = data.rapport_quinte.order;
+      document.getElementById("rapport-quinte-desorde").textContent = data.rapport_quinte.desorde;
+      document.getElementById("rapport-quinte-qoarti").textContent = data.rapport_quinte.qoarti;
+      document.getElementById("rapport-quinte-terce").textContent = data.rapport_quinte.terce;
+
+      // Rapport Réunion1
+      document.getElementById("rapport-reunion1-date").textContent = data.rapport_reunion1.date;
+      for(let i=1;i<=8;i++){
+        const el = document.getElementById("rapport-reunion1-course"+i);
+        if(el) el.textContent = data.rapport_reunion1["course"+i];
+      }
+    }
+
+  })
+  .catch(err => {
+    console.error("Error loading JSON:", err);
+  });
