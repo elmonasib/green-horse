@@ -1,9 +1,9 @@
 {
   "pronostic": {
     "date": "006.09.2025",
-    "title": "R1 Casablanca",
-    "names": "Player One\nPlayer Two",
-    "numbers": "4 7 2 9 5 1"
+    "title": "R1 Course N°1 : Prix du Credit Agricole",
+    "names": "Course Européenne - Course D - 35 000€ - Attelé - Tous chevaux - 7-11 ans - 2700 mètres - Autostart - Corde à gauche - Départ vers 13h55",
+    "numbers": "1 1 1 1 1 1"
   },
   "pronostic_reunion1": {
     "course1": "6 5 8 1 4",
@@ -35,4 +35,5 @@
     "course8": "5 6 7 4 1"
   }
 }
+
 
