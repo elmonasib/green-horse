@@ -93,7 +93,9 @@
 .card-body h6,
 .card-body p,
 .card-body h5 {
-  margin-bottom: 10px;
+  margin-bottom:10px;
+
+ 
 }
 
 /* Navbar button */
@@ -103,19 +105,84 @@
   border: none;
   color: #fff;
 }
+
 .fw-bold {
 
   padding: 15px;
   font-size: 30px;
 }
 
-.mb-2 {
 
-  padding: 6px;
-}
 
 .col-6 {
 
 
-  padding: 4px;
+  padding: 3px;
 }
+
+.box {
+
+height: 30px;
+
+width: 350px;
+justify-content: center;
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 10px 50px;
+
+
+}
+
+.BOXPRO {
+
+height: 25px;
+width: 50px;
+background: linear-gradient(90deg, #009688, #0072ff);
+border-radius: 10px;
+font-size: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+
+
+}
+.BOXPRO1 {
+
+height: 25px;
+width: 50px;
+background: linear-gradient(90deg, #009688, #0072ff);
+border-radius: 10px;
+font-size: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+.BOXPRO2 {
+
+height: 25px;
+width: 50px;
+background: linear-gradient(90deg, #009688, #0072ff);
+border-radius: 10px;
+font-size: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+.BOXPRO3 {
+
+height: 25px;
+width: 50px;
+background: linear-gradient(90deg, #009688, #0072ff);
+border-radius: 10px;
+font-size: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
