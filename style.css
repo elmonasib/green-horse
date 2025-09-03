@@ -103,3 +103,19 @@
   border: none;
   color: #fff;
 }
+.fw-bold {
+
+  padding: 15px;
+  font-size: 30px;
+}
+
+.mb-2 {
+
+  padding: 6px;
+}
+
+.col-6 {
+
+
+  padding: 4px;
+}
