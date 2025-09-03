@@ -1,4 +1,4 @@
-const DATA_URL = "data.json";
+const DATA_URL = "https://raw.githubusercontent.com/elmonasib/green-horse/main/data.json";
 
 // Sidebar toggle
 const menuBtn = document.getElementById("menuBtn");
